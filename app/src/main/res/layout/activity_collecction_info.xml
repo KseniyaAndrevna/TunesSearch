@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CollectionInfoActivity">
+
+    <ImageView
+        android:id="@+id/info_img_album"
+        android:layout_width="@dimen/info_img_size"
+        android:layout_height="@dimen/info_img_size"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/small"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/bb" />
+
+    <TextView
+        android:id="@+id/info_txt_album_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/small"
+        android:layout_marginLeft="@dimen/small"
+        android:layout_marginTop="@dimen/small"
+        android:text="@string/info_album_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/info_img_album"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/info_tv_album_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/small"
+        android:layout_marginLeft="@dimen/small"
+        android:layout_marginTop="@dimen/small"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/info_txt_album_name"
+        tools:text="Album name" />
+
+    <TextView
+        android:id="@+id/info_txt_artist_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/middle"
+        android:text="@string/info_artist_name"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/info_txt_album_name"
+        app:layout_constraintTop_toBottomOf="@+id/info_tv_album_name" />
+
+    <TextView
+        android:id="@+id/info_tv_artist_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/small"
+        android:layout_marginLeft="@dimen/small"
+        android:layout_marginTop="@dimen/small"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/info_txt_artist_name"
+        tools:text="Artist name" />
+
+    <TextView
+        android:id="@+id/info_txt_genre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/middle"
+        android:text="@string/info_album_genre"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/info_txt_artist_name"
+        app:layout_constraintTop_toBottomOf="@+id/info_tv_artist_name" />
+
+    <TextView
+        android:id="@+id/info_tv_genre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/middle"
+        android:layout_marginLeft="@dimen/middle"
+        app:layout_constraintStart_toEndOf="@+id/info_txt_genre"
+        app:layout_constraintTop_toTopOf="@+id/info_txt_genre"
+        tools:text="Rock" />
+
+    <TextView
+        android:id="@+id/info_txt_realise"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/middle"
+        android:text="@string/info_realise_date"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/info_txt_genre"
+        app:layout_constraintTop_toBottomOf="@+id/info_txt_genre" />
+
+    <TextView
+        android:id="@+id/info_tv_realise"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/info_tv_genre"
+        app:layout_constraintTop_toTopOf="@+id/info_txt_realise"
+        tools:text="01.02.2019" />
+
+    <TextView
+        android:id="@+id/info_txt_count_track"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/middle"
+        android:text="@string/info_track_count"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/info_txt_realise"
+        app:layout_constraintTop_toBottomOf="@+id/info_txt_realise" />
+
+    <TextView
+        android:id="@+id/info_tv_count_track"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/info_tv_realise"
+        app:layout_constraintTop_toTopOf="@+id/info_txt_count_track"
+        tools:text="19" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/info_rv_songs"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/small"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/info_txt_count_track"
+        tools:listitem="@layout/item" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

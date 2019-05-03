@@ -1,3 +1,15 @@
 <resources>
-    <string name="app_name">TunesSearch</string>
+    <string name="app_name">TuneSearch</string>
+
+    <!--MainActivity-->
+    <string name="main_btn_text">GO!</string>
+    <string name="main_logo_text">Tune \nSearch</string>
+    <string name="main_et_hint">Album name</string>
+
+    <!--InfoActivity-->
+    <string name="info_album_name">Album name</string>
+    <string name="info_artist_name">Artist name</string>
+    <string name="info_album_genre">Album genre</string>
+    <string name="info_realise_date">Realise Date</string>
+    <string name="info_track_count">Track count:</string>
 </resources>

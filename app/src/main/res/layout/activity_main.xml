@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context=".MainActivity">
 
     <TextView
@@ -12,9 +11,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_margin="8dp"
-        android:paddingTop="8dp"
-        android:text="Tune\nSearch"
+        android:layout_margin="@dimen/small"
+        android:text="@string/main_logo_text"
         android:textAlignment="center"
         android:textColor="@android:color/darker_gray"
         android:textSize="60sp"
@@ -27,18 +25,19 @@
         android:id="@+id/main_til"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="8dp"
+        android:layout_margin="@dimen/small"
         app:layout_constraintBottom_toTopOf="@+id/main_btn_search"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/main_tv_logo">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:maxLines="1"
+            android:inputType="textCapSentences"
             android:id="@+id/main_et_search"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/app_name" />
+            android:hint="@string/main_et_hint"
+            android:maxLines="1" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -46,9 +45,8 @@
         android:id="@+id/main_btn_search"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:layout_marginBottom="16dp"
-        android:text="GO!"
+        android:layout_margin="@dimen/small"
+        android:text="@string/main_btn_text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/main_til" />
@@ -57,7 +55,7 @@
         android:id="@+id/main_rv_albums"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_margin="8dp"
+        android:layout_margin="@dimen/small"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
